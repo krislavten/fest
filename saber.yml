@@ -1,0 +1,23 @@
+version: 2.0
+project_type: node
+stages:
+ - build
+# test
+build-test:
+  stage: build
+  image: registry.cn-beijing.aliyuncs.com/yuanfd/yfd_nodejs_stable
+  only:
+    branch:
+      - master
+  script:
+    - yarn --registry http://npm.zhenguanyu.com
+    - yarn build
+    - npm i pm2 -g
+    - PM2_HOME=/home/shared/log pm2 start:prod -i 0 --env test package.json
+  artifacts:
+    name: build-test-artifacts
+    docker: true
+    path:
+      - "**/*"
+    tags:
+      - test # TESTING
