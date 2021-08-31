@@ -12,7 +12,7 @@ build-test:
   script:
     - yarn --registry http://npm.zhenguanyu.com
     - yarn build
-    - yarn start:prod
+    - pm2 start npm --name "ep-node-base" -- run prod
   artifacts:
     name: build-test-artifacts
     docker: true
