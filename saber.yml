@@ -12,8 +12,7 @@ build-test:
   script:
     - yarn --registry http://npm.zhenguanyu.com
     - yarn build
-    - npm i pm2 -g
-    - PM2_HOME=/home/shared/log pm2 dist/main.js -i 0 --env test
+    - yarn start:prod
   artifacts:
     name: build-test-artifacts
     docker: true
