@@ -1,0 +1,43 @@
+version: 2.0
+project_type: node
+
+stages:
+  - build
+
+# test
+build-test:
+  stage: build
+  image: node:12.13.1
+  only:
+    branch:
+      - test
+  script:
+    - npm install @yuanfudao/ok-cli -g --registry=http://npm.zhenguanyu.com/
+    - yarn --registry=http://npm.zhenguanyu.com
+    - yarn build
+  artifacts:
+    name: build-test
+    upload: true
+    path:
+      - "dist/**"
+    tags:
+      - test
+
+# online
+build-online:
+  stage: build
+  image: node:12.13.1
+  only:
+    branch:
+      - online
+  script:
+    - npm install @yuanfudao/ok-cli -g --registry=http://npm.zhenguanyu.com/
+    - yarn --registry=http://npm.zhenguanyu.com
+    - yarn build
+  artifacts:
+    name: build-online
+    upload: true
+    path:
+      - "dist/**"
+    tags:
+      - online
