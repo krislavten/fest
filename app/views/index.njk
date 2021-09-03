@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="//upload.zhenguanyu.com/uploads/5c07513b_favicon.ico">
     {% block page_style %}
-        {{ loadCss('main') | safe }}
+        {{ loadCss('index') | safe }}
     {% endblock %}
     <title>ok</title>
   </head>
@@ -16,8 +16,9 @@
     </noscript>
     <div id="app"></div>
     {% block page_script %}
+      {{ loadJs('vendors') | safe }}
       {{ loadJs('dll/framework') | safe }}
-      {{ loadJs('main') | safe }}
+      {{ loadJs('index') | safe }}
     {% endblock %}
   </body>
 </html>
