@@ -10,7 +10,7 @@
 ### Directory
 
 - app 服务端代码
-  - src nestjs controller / service / mudule / main
+  - src nestjs controller / service / module / main
   - plugin 拓展
   - utils 通用工具
   - views 视图
