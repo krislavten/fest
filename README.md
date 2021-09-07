@@ -29,21 +29,12 @@
 ### install
 
 ```bash
-yarn # install app dependencies
-
-cd client/ # go to the client directory
-
-yarn # install client dependencies
+make install
 ```
 
 ### dev
 
 ```bash
-cd client/ # go to the client directory
-
-yarn dev # 构建生成页面端代码并生成 version 文件
-
-cd .. # back to the root directory
-
-yarn dev # 服务端启动，监听预设端口，页面可访问。 eg: http://127.0.0.1:3000
+make dev # 构建生成客户端代码并生成 version 文件
+make start # 服务端启动，监听预设端口，页面可访问。 eg: http://127.0.0.1:3000
 ```
