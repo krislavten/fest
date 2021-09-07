@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="{% block html_class %}{% endblock %}" lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="{{ keywords }}"/>
+    <meta name="description" content="{{ description }}"/>
+    <title>
+      {% block page_title %}{{ title }}
+      {% endblock %}
+    </title>
+    {% block favicon %}
+      <link rel="icon" href="//upload.zhenguanyu.com/uploads/5c07513b_favicon.ico">
+    {% endblock %}
+    {% block page_style %}{% endblock %}
+    {% block head_script %}{% endblock %}
+  </head>
+  <body class="{% block body_class %}{% endblock %}">
+    {# 顶部栏 #}
+    {% block base_header %}{% endblock %}
+    {# 页面内容 #}
+    <div class="page-content">
+      {% block page_content %}
+        <div id="app"></div>
+      {% endblock %}
+    </div>
+    <!-- project-js start -->
+    {% block project_js %}{% endblock %}
+    <!-- project-js end -->
+    <!-- page-js start -->
+    {% block page_js %}{% endblock %}
+    <!-- page-js end -->
+  </body>
+</html>

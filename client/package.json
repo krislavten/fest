@@ -1,0 +1,33 @@
+{
+  "name": "vue-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "ok dev",
+    "build": "ok build",
+    "lint": "ok lint"
+  },
+  "dependencies": {
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@yuanfudao/eslint-config-ok": "^4.2.0",
+    "@yuanfudao/ok-plugin-version-v2": "1.1.0",
+    "@yuanfudao/ok-preset-vue": "^4.2.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.28.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "prettier": "^2.2.1",
+    "typescript": "^4.3.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "ok pre-commit",
+      "commit-msg": "ok commit-msg"
+    }
+  }
+}

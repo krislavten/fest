@@ -1,0 +1,56 @@
+{% extends './base.njk' %}
+
+{% block base_style %}
+  {% if menuInfo %}
+    {{ menuInfo.style | safe }}
+  {% endif %}
+{% endblock %}
+
+{% block body_html %}
+  <!-- ▼ 一二级导航 -->
+  {% block side_menu %}
+    {% if menuInfo %}
+      {{ menuInfo.html | safe }}
+    {% endif %}
+  {% endblock %}
+  <!-- ▲ 一二级导航 -->
+
+  <!-- ▼ 页面主体内容 -->
+  <div id="app-container" class="container">
+    {% block container %}
+
+      <!-- ▼ 顶部导航 -->
+      {% block top_nav %}
+      {% endblock %}
+      <!-- ▲ 顶部导航 -->
+
+      <div id="app-container-top"></div>
+
+      <div class="app">
+        <div class="app-inner clearfix">
+          <div class="app-init-container">
+
+            <!-- ▼ 子页面主体 -->
+            {% block app_content_base_container %}
+              {% block app_content %}
+              {% endblock %}
+            {% endblock %}
+            <!-- ▲ 子页面主体 -->
+
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+  <!-- ▲ 页面主体内容 -->
+{% endblock %}
+
+<!-- ▼ 模块级脚本 -->
+{% block base_script %}
+  <!-- ▼ 导航菜单脚本 -->
+  {% if menuInfo %}
+    {{ menuInfo.script | safe }}
+  {% endif %}
+  <!-- ▲ 导航菜单脚本 -->
+{% endblock %}
+<!-- ▲ 模块级脚本 -->

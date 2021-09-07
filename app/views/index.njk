@@ -1,0 +1,10 @@
+{% extends "./common/with_nav_base.njk" %}
+
+{% block page_style %}
+    {{ loadCss("index") | safe }}
+{% endblock %}
+
+{% block page_js %}
+    {{ loadJs("index") | safe }}
+{% endblock %}
+

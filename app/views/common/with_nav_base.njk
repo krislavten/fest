@@ -1,0 +1,10 @@
+{% extends "../layout/with_side_menu_layout.njk" %}
+
+{% block project_style %}
+  {{ loadCss("vendors") | safe }}
+{% endblock %}
+
+{% block project_js %}
+  {{ loadJs("dll/framework") | safe }}
+  {{ loadJs("vendors") | safe }}
+{% endblock %}
