@@ -32,7 +32,6 @@ function loadCss(key: string, media = 'screen') {
 }
 
 export function initView(app, viewPath) {
-  console.log('viewPath', viewPath);
   app.setBaseViewsDir(viewPath);
   app.setViewEngine('njk');
   const nunjucksEnv = nunjucks.configure(viewPath, {

@@ -1,73 +1,49 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+## Nestjs & vue
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+> A Nestjs(express) MVC App
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+### Basic Technology Stack
 
-## Description
+- template engine - nunjucks
+- view - vue. (also supports react)
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+### Directory
 
-## Installation
+- app 服务端代码
+  - src nestjs controller / service / mudule / main
+  - plugin 拓展
+  - utils 通用工具
+  - views 视图
+- client 客户端代码
+  - pages 多页面目录
+  - ok.config.js ok 配置
+  - ...
+- config 客户端代码打包后版本文件
+  - version_css.json css 相关
+  - version_js.json js 相关
+- dist 服务端构建产物
+- public 客户端构建产物
+- test 测试代码
+- nest-cli.json nest 基本配置
 
-```bash
-$ npm install
-```
-
-## Running the app
+### install
 
 ```bash
-# development
-$ npm run start
+yarn # install app dependencies
 
-# watch mode
-$ npm run start:dev
+cd client/ # go to the client directory
 
-# production mode
-$ npm run start:prod
+yarn # install client dependencies
 ```
 
-## Test
+### dev
 
 ```bash
-# unit tests
-$ npm run test
+cd client/ # go to the client directory
 
-# e2e tests
-$ npm run test:e2e
+yarn dev # 构建生成页面端代码并生成 version 文件
 
-# test coverage
-$ npm run test:cov
+cd .. # back to the root directory
+
+yarn dev # 服务端启动，监听预设端口，页面可访问。 eg: http://127.0.0.1:3000
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).

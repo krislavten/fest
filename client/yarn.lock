@@ -1850,10 +1850,10 @@
     url-loader "^4.1.1"
     webpack "4.x"
 
-"@yuanfudao/ok-plugin-version-v2@^1.0.0":
-  version "1.0.0"
-  resolved "http://npm.zhenguanyu.com/@yuanfudao/ok-plugin-version-v2/download/@yuanfudao/ok-plugin-version-v2-1.0.0.tgz#7affea2e5443f3e865227d94077f130ad642922c"
-  integrity sha1-ev/qLlRD8+hlIn2UB38TCtZCkiw=
+"@yuanfudao/ok-plugin-version-v2@1.1.0":
+  version "1.1.0"
+  resolved "http://npm.zhenguanyu.com/@yuanfudao/ok-plugin-version-v2/download/@yuanfudao/ok-plugin-version-v2-1.1.0.tgz#0d97571ca2e3bd228e033c9288fe367668a52b3c"
+  integrity sha1-DZdXHKLjvSKOAzySiP42dmilKzw=
   dependencies:
     "@yuanfudao/ok-shared" "4.2.6"
 
