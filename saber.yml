@@ -6,6 +6,8 @@ stages:
 build-test:
   stage: build
   image: registry.cn-beijing.aliyuncs.com/yuanfd/yfd_nodejs_stable
+  yum:
+    - make
   only:
     branch:
       - master
