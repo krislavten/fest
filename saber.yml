@@ -11,6 +11,7 @@ build-test:
       - master
   script:
     - yarn --registry http://npm.zhenguanyu.com
+    - make dev
     - yarn build
     - npm i pm2 -g
     - PM2_HOME=/home/shared/log pm2 start npm --name "ep-node-base" -- run prod
