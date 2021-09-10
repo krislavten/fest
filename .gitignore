@@ -35,4 +35,5 @@ lerna-debug.log*
 !.vscode/extensions.json
 
 public
-config
+config/version_css.json
+config/version_js.json
