@@ -12,6 +12,7 @@ build-test:
     branch:
       - master
   script:
+    - npm install @yuanfudao/ok-cli -g --registry=http://npm.zhenguanyu.com/
     - yarn --registry http://npm.zhenguanyu.com
     - make dev
     - yarn build
