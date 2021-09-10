@@ -24,9 +24,7 @@
     {% block base_header %}{% endblock %}
     {# 页面内容 #}
     <div class="page-content">
-      {% block page_content %}
-        <div id="app"></div>
-      {% endblock %}
+      {% block body_html %}{% endblock %}
     </div>
     <!-- project-js start -->
     {% block project_js %}{% endblock %}
