@@ -30,5 +30,4 @@ build-app:
 	yarn build
 	cp -R app/views dist/app/
 
-build:
-	build-client build-app
+build: build-client build-app
