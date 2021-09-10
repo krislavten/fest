@@ -9,9 +9,12 @@
 {% block body_html %}
   <!-- ▼ 一二级导航 -->
   {% block side_menu %}
-    {% if menuInfo %}
-      {{ menuInfo.html | safe }}
-    {% endif %}
+   <div>
+     <ul>
+        <li><a href="./index">index page</a></li>
+        <li><a href="./list">list page</a></li>
+     </ul>
+   </div>
   {% endblock %}
   <!-- ▲ 一二级导航 -->
 
@@ -33,6 +36,8 @@
             <!-- ▼ 子页面主体 -->
             {% block app_content_base_container %}
               {% block app_content %}
+                <div id="app"></div>
+                {{ menu }}
               {% endblock %}
             {% endblock %}
             <!-- ▲ 子页面主体 -->

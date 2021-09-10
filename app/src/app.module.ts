@@ -1,10 +1,12 @@
 import { join } from 'path';
-import { Module } from '@nestjs/common';
+import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { root } from 'app/utils';
+import { LoggerMiddleware } from 'app/middleware/logger.middleware';
 import { ListModule } from './list/list.module';
 import { IndexModule } from './index/index.module';
+import { MenuMiddleware } from 'app/middleware/menu.middleware';
 
 const ENV = process.env.NODE_ENV;
 
@@ -20,4 +22,8 @@ const ENV = process.env.NODE_ENV;
     IndexModule,
   ],
 })
-export class AppModule {}
+export class AppModule implements NestModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer.apply(LoggerMiddleware, MenuMiddleware).forRoutes('*');
+  }
+}
