@@ -14,7 +14,7 @@ build-test:
   script:
     - npm install @yuanfudao/ok-cli -g --registry=http://npm.zhenguanyu.com/
     - make install
-    - make dev
+    - make build-client
     - yarn build
     - npm i pm2 -g
     - PM2_HOME=/home/shared/log pm2 start npm --name "ep-node-base" -- run prod

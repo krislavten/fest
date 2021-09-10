@@ -22,3 +22,6 @@ dev:
 
 start:
 	yarn dev
+
+build-client:
+  cd client && yarn build
