@@ -25,3 +25,10 @@ start:
 
 build-client:
 	cd client && yarn build
+
+build-app:
+	yarn build
+	cp -R app/views dist/app/
+
+build:
+	build-client build-app
